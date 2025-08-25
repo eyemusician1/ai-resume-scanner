@@ -26,7 +26,7 @@ export default function Home() {
     <Navbar/>
 
     <section className="main-section">
-        <div className="page-heading py-16">
+        <div className="page-heading py-16 max-sm:py-8">
             <h1>Track your Applications & Resume ratings</h1>
             <h2>Review your resume and the AI will check it.</h2>
         </div>

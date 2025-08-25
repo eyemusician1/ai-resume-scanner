@@ -27,11 +27,11 @@ main {
   @apply min-h-screen pt-10;
 }
 h1 {
-  @apply max-sm:text-[3rem] text-6xl  text-gradient leading-tight xl:tracking-[-2px] font-semibold;
+  @apply max-sm:text-[2.5rem] sm:text-[3rem] text-6xl  text-gradient leading-tight xl:tracking-[-2px] font-semibold;
 }
 
 h2 {
-  @apply max-sm:text-xl text-3xl text-dark-200;
+  @apply max-sm:text-lg sm:text-xl text-3xl text-dark-200;
 }
 
 label {
@@ -85,11 +85,11 @@ form {
   }
 
   .resume-card {
-    @apply flex flex-col gap-8 h-[560px] w-[350px] lg:w-[430px] xl:w-[490px] bg-white rounded-2xl p-4;
+    @apply flex flex-col gap-6 max-sm:gap-4 h-auto max-sm:h-auto w-full max-w-[350px] sm:w-[350px] lg:w-[430px] xl:w-[490px] bg-white rounded-2xl p-4 max-sm:p-3;
   }
 
   .resume-card-header {
-    @apply flex flex-row gap-2 justify-between min-h-[110px] max-sm:flex-col items-center max-md:justify-center max-md:items-center;
+    @apply flex flex-row gap-2 justify-between min-h-[110px] max-sm:min-h-[80px] max-sm:flex-col max-sm:items-start max-sm:gap-3;
   }
 
   .feedback-section {
@@ -97,7 +97,7 @@ form {
   }
 
   .navbar {
-    @apply flex flex-row justify-between items-center bg-white rounded-full p-4 w-full px-10 max-w-[1200px] mx-auto;
+    @apply flex flex-row justify-between items-center bg-white rounded-full p-4 w-full px-10 max-w-[1200px] mx-auto max-sm:px-4;
   }
 
   .score-badge {
@@ -113,6 +113,28 @@ form {
   }
   .uploader-selected-file {
     @apply flex items-center justify-between p-3 bg-gray-50 rounded-2xl;
+  }
+}
+
+/* Mobile-specific improvements */
+@media (max-width: 640px) {
+  .resume-card {
+    margin: 0 auto;
+  }
+  
+  .resume-card-header h2,
+  .resume-card-header h3 {
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  .navbar {
+    margin: 0 8px;
+  }
+  
+  .main-section {
+    padding-left: 8px;
+    padding-right: 8px;
   }
 }
 
